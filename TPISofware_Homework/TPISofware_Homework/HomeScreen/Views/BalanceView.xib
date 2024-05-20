@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BalanceView" customModule="TPISofware_Homework" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Vhl-9W-RRA"/>
+                <outlet property="khrValueLabel" destination="z1b-7n-Dnh" id="Zza-nN-BCs"/>
+                <outlet property="showHideBtn" destination="XK7-GN-63c" id="zqc-XN-Oe3"/>
+                <outlet property="usdValueLabel" destination="8gk-Q5-cVQ" id="fnk-o8-mKJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rp-hG-dkq">
+                    <rect key="frame" x="24" y="12" width="180" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                    <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK7-GN-63c">
+                    <rect key="frame" x="212" y="10.666666666666664" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="Kbw-rh-0cU"/>
+                        <constraint firstAttribute="height" constant="24" id="Tun-6F-3ck"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="iconEye01On"/>
+                    <connections>
+                        <action selector="showHideBtn:" destination="-1" eventType="touchUpInside" id="oA3-gh-gLJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld5-0y-Ryg">
+                    <rect key="frame" x="24" y="49" width="33" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-Q5-cVQ">
+                    <rect key="frame" x="23.999999999999993" y="68.333333333333329" width="91.333333333333314" height="27.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KHR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05f-DD-3Cz">
+                    <rect key="frame" x="24" y="104" width="32" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-7n-Dnh">
+                    <rect key="frame" x="23.999999999999993" y="123.33333333333333" width="91.333333333333314" height="27.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ld5-0y-Ryg" firstAttribute="top" secondItem="4Rp-hG-dkq" secondAttribute="bottom" constant="16" id="0TK-c3-0fH"/>
+                <constraint firstItem="8gk-Q5-cVQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="55h-ZB-ewv"/>
+                <constraint firstItem="z1b-7n-Dnh" firstAttribute="top" secondItem="05f-DD-3Cz" secondAttribute="bottom" id="IVz-Ka-hWf"/>
+                <constraint firstItem="8gk-Q5-cVQ" firstAttribute="top" secondItem="ld5-0y-Ryg" secondAttribute="bottom" id="NB5-lR-iqh"/>
+                <constraint firstItem="05f-DD-3Cz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="NfQ-fP-uzQ"/>
+                <constraint firstItem="4Rp-hG-dkq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="WV6-9a-8cl"/>
+                <constraint firstItem="XK7-GN-63c" firstAttribute="leading" secondItem="4Rp-hG-dkq" secondAttribute="trailing" constant="8" id="YxH-o6-mBz"/>
+                <constraint firstItem="z1b-7n-Dnh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="hae-0q-lQF"/>
+                <constraint firstItem="4Rp-hG-dkq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="iFe-9o-EGI"/>
+                <constraint firstItem="05f-DD-3Cz" firstAttribute="top" secondItem="8gk-Q5-cVQ" secondAttribute="bottom" constant="8" id="mgj-AA-S1o"/>
+                <constraint firstItem="XK7-GN-63c" firstAttribute="centerY" secondItem="4Rp-hG-dkq" secondAttribute="centerY" id="mvl-nY-UAD"/>
+                <constraint firstItem="ld5-0y-Ryg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="pmR-7d-0LB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="84.732824427480907" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconEye01On" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

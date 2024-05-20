@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ButtonCell" customModule="TPISofware_Homework" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="96"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-5W-MVR">
+                        <rect key="frame" x="34.666666666666664" y="8" width="55.999999999999993" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="X0N-gp-qtV"/>
+                            <constraint firstAttribute="width" constant="56" id="cTg-sE-48O"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="button00ElementMenuTransfer"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyd-Zq-sQq">
+                        <rect key="frame" x="8" y="64" width="109" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="a3f-hU-3hs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Kyd-Zq-sQq" secondAttribute="bottom" constant="8" id="5jK-HY-c8r"/>
+                <constraint firstItem="ZXN-5W-MVR" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="9NP-Jk-64E"/>
+                <constraint firstItem="Kyd-Zq-sQq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="TWL-BQ-9vv"/>
+                <constraint firstItem="Kyd-Zq-sQq" firstAttribute="top" secondItem="ZXN-5W-MVR" secondAttribute="bottom" id="ejI-Sx-JZT"/>
+                <constraint firstAttribute="trailing" secondItem="Kyd-Zq-sQq" secondAttribute="trailing" constant="8" id="nRQ-zu-ZYA"/>
+            </constraints>
+            <size key="customSize" width="137" height="165"/>
+            <connections>
+                <outlet property="btn" destination="ZXN-5W-MVR" id="mcQ-S5-iN2"/>
+                <outlet property="titleLabel" destination="Kyd-Zq-sQq" id="ulf-pX-R85"/>
+            </connections>
+            <point key="canvasLocation" x="-49.618320610687022" y="28.87323943661972"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="button00ElementMenuTransfer" width="56" height="56"/>
+    </resources>
+</document>
