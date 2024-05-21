@@ -47,7 +47,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KZp-ie-KCT">
-                    <rect key="frame" x="0.0" y="52" width="375" height="84"/>
+                    <rect key="frame" x="24" y="52" width="327" height="84"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gnv-SI-CmE">
                         <size key="itemSize" width="128" height="128"/>
@@ -89,11 +89,11 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="KZp-ie-KCT" secondAttribute="bottom" id="4uM-pL-MXR"/>
                 <constraint firstItem="rI1-uL-lb0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9mR-It-n1u"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KZp-ie-KCT" secondAttribute="trailing" id="T0n-dS-c1w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KZp-ie-KCT" secondAttribute="trailing" constant="24" id="T0n-dS-c1w"/>
                 <constraint firstItem="rI1-uL-lb0" firstAttribute="top" secondItem="QIN-K2-1Ni" secondAttribute="bottom" id="Xj8-Tw-qlQ"/>
                 <constraint firstAttribute="bottom" secondItem="rI1-uL-lb0" secondAttribute="bottom" id="YJk-6M-uMz"/>
                 <constraint firstItem="rI1-uL-lb0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aUt-sW-1j7"/>
-                <constraint firstItem="KZp-ie-KCT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eHc-RK-R8Q"/>
+                <constraint firstItem="KZp-ie-KCT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="eHc-RK-R8Q"/>
                 <constraint firstItem="KZp-ie-KCT" firstAttribute="top" secondItem="QIN-K2-1Ni" secondAttribute="bottom" constant="4" id="fhr-hg-BxK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QIN-K2-1Ni" secondAttribute="trailing" id="ma5-CH-ZqK"/>
                 <constraint firstItem="QIN-K2-1Ni" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zUt-AT-ubp"/>

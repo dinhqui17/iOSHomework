@@ -53,7 +53,7 @@ class BalanceView: UIView {
         Publishers.CombineLatest(viewModel.$isShowBalance, viewModel.$usdBalanceValue.map({"\($0)"}))
             .receive(on: DispatchQueue.main)
             .map({(isShowBalance, usdBalanceValue) -> String in
-                isShowBalance ? usdBalanceValue : "*******"
+                isShowBalance ? usdBalanceValue.formattedWithSeparator() : "*******"
             })
             .assign(to: \.text, on: self.usdValueLabel)
             .store(in: &disposeBag)
@@ -61,7 +61,7 @@ class BalanceView: UIView {
         Publishers.CombineLatest(viewModel.$isShowBalance, viewModel.$khrBalanceValue.map({"\($0)"}))
             .receive(on: DispatchQueue.main)
             .map({(isShowBalance, khrBalanceValue) -> String in
-                isShowBalance ? khrBalanceValue : "*******"
+                isShowBalance ? khrBalanceValue.formattedWithSeparator() : "*******"
             })
             .assign(to: \.text, on: self.khrValueLabel)
             .store(in: &disposeBag)

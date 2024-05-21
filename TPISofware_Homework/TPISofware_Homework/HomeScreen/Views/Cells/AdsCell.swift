@@ -9,12 +9,9 @@ import UIKit
 
 class AdsCell: UICollectionViewCell {
     
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func configure(with imageString: String) {
@@ -23,7 +20,6 @@ class AdsCell: UICollectionViewCell {
                 self.imageView.image = image
                 self.imageView.contentMode = .scaleAspectFit
             }
-            contentView.backgroundColor = .yellow
         }
         
     }

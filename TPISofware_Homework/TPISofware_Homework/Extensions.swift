@@ -35,3 +35,15 @@ extension UIViewController {
         }
     }
 }
+
+extension String {
+    func formattedWithSeparator() -> String {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            if let number = Double(self), let formattedNumber = formatter.string(from: NSNumber(value: number)) {
+                return formattedNumber
+            } else {
+                return self
+            }
+        }
+}

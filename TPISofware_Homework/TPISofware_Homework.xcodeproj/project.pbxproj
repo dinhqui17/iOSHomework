@@ -13,7 +13,6 @@
 		B580A9C42BF7376900B9D755 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9C32BF7376900B9D755 /* NavigationView.swift */; };
 		B580A9C62BF7383800B9D755 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9C52BF7383800B9D755 /* NavigationView.xib */; };
 		B580A9CC2BF7398300B9D755 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9CA2BF7398300B9D755 /* HomeViewController.xib */; };
-		B580A9CE2BF7BE4C00B9D755 /* BalanceView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */; };
 		B580A9D02BF7BE5A00B9D755 /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */; };
 		B580A9D72BF7C79200B9D755 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9D52BF7C79200B9D755 /* ButtonCell.swift */; };
 		B580A9D82BF7C79200B9D755 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9D62BF7C79200B9D755 /* ButtonCell.xib */; };
@@ -68,7 +67,6 @@
 		B580A9C32BF7376900B9D755 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		B580A9C52BF7383800B9D755 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		B580A9CA2BF7398300B9D755 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView2.swift; sourceTree = "<group>"; };
 		B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceView.xib; sourceTree = "<group>"; };
 		B580A9D52BF7C79200B9D755 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		B580A9D62BF7C79200B9D755 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				B580A9FF2BF9F1DE00B9D755 /* Cells */,
 				B580A9C32BF7376900B9D755 /* NavigationView.swift */,
 				B580A9C52BF7383800B9D755 /* NavigationView.xib */,
-				B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */,
 				B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */,
 				B580A9DB2BF7D33E00B9D755 /* FavoriteView.swift */,
 				B580A9DD2BF7D4C800B9D755 /* FavoriteView.xib */,
@@ -408,7 +405,6 @@
 				B580AA412BFC496500B9D755 /* MiddleButtonRepository.swift in Sources */,
 				B580AA092BF9F8AE00B9D755 /* BottomBarView.swift in Sources */,
 				B580AA472BFC53C200B9D755 /* FavoriteModel.swift in Sources */,
-				B580A9CE2BF7BE4C00B9D755 /* BalanceView2.swift in Sources */,
 				B580AA3D2BFBBA4E00B9D755 /* BalanceView.swift in Sources */,
 				B580AA3B2BFBB40B00B9D755 /* BalanceViewModel.swift in Sources */,
 				B580AA392BFBABD000B9D755 /* HomeBalanceRepository.swift in Sources */,
