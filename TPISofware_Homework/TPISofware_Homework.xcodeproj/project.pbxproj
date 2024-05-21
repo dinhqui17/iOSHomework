@@ -34,15 +34,11 @@
 		B580AA122BF9FDF300B9D755 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA112BF9FDF300B9D755 /* HomeModel.swift */; };
 		B580AA172BFAF18F00B9D755 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA162BFAF18E00B9D755 /* BalanceModel.swift */; };
 		B580AA192BFAF34D00B9D755 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA182BFAF34D00B9D755 /* APIService.swift */; };
-		B580AA1B2BFAF36700B9D755 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA1A2BFAF36700B9D755 /* APIError.swift */; };
-		B580AA1D2BFAF3B400B9D755 /* APIBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA1C2BFAF3B400B9D755 /* APIBalance.swift */; };
-		B580AA1F2BFB19F100B9D755 /* APIBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA1E2BFB19F100B9D755 /* APIBanner.swift */; };
 		B580AA212BFB1A4400B9D755 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA202BFB1A4400B9D755 /* BannerModel.swift */; };
 		B580AA232BFB211800B9D755 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA222BFB211800B9D755 /* Extensions.swift */; };
 		B580AA282BFB514300B9D755 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA262BFB514300B9D755 /* NotificationViewController.swift */; };
 		B580AA292BFB514300B9D755 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580AA272BFB514300B9D755 /* NotificationViewController.xib */; };
 		B580AA2E2BFB595000B9D755 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA2D2BFB595000B9D755 /* NotificationModel.swift */; };
-		B580AA302BFB59E400B9D755 /* APINotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA2F2BFB59E400B9D755 /* APINotification.swift */; };
 		B580AA322BFB5B2200B9D755 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA312BFB5B2200B9D755 /* NotificationViewModel.swift */; };
 		B580AA352BFB5EC300B9D755 /* NotificationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA332BFB5EC300B9D755 /* NotificationMessageCell.swift */; };
 		B580AA362BFB5EC300B9D755 /* NotificationMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580AA342BFB5EC300B9D755 /* NotificationMessageCell.xib */; };
@@ -93,15 +89,11 @@
 		B580AA112BF9FDF300B9D755 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		B580AA162BFAF18E00B9D755 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		B580AA182BFAF34D00B9D755 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		B580AA1A2BFAF36700B9D755 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		B580AA1C2BFAF3B400B9D755 /* APIBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBalance.swift; sourceTree = "<group>"; };
-		B580AA1E2BFB19F100B9D755 /* APIBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBanner.swift; sourceTree = "<group>"; };
 		B580AA202BFB1A4400B9D755 /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		B580AA222BFB211800B9D755 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B580AA262BFB514300B9D755 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		B580AA272BFB514300B9D755 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
 		B580AA2D2BFB595000B9D755 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
-		B580AA2F2BFB59E400B9D755 /* APINotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINotification.swift; sourceTree = "<group>"; };
 		B580AA312BFB5B2200B9D755 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		B580AA332BFB5EC300B9D755 /* NotificationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMessageCell.swift; sourceTree = "<group>"; };
 		B580AA342BFB5EC300B9D755 /* NotificationMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationMessageCell.xib; sourceTree = "<group>"; };
@@ -255,10 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				B580AA182BFAF34D00B9D755 /* APIService.swift */,
-				B580AA1A2BFAF36700B9D755 /* APIError.swift */,
-				B580AA1C2BFAF3B400B9D755 /* APIBalance.swift */,
-				B580AA1E2BFB19F100B9D755 /* APIBanner.swift */,
-				B580AA2F2BFB59E400B9D755 /* APINotification.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -415,11 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B580A9EF2BF9D8E500B9D755 /* AdsCell.swift in Sources */,
-				B580AA302BFB59E400B9D755 /* APINotification.swift in Sources */,
-				B580AA1F2BFB19F100B9D755 /* APIBanner.swift in Sources */,
 				B580A9C42BF7376900B9D755 /* NavigationView.swift in Sources */,
 				B580A9F62BF9EDC300B9D755 /* ButtonAreaView.swift in Sources */,
-				B580AA1B2BFAF36700B9D755 /* APIError.swift in Sources */,
 				B580AA412BFC496500B9D755 /* MiddleButtonRepository.swift in Sources */,
 				B580AA092BF9F8AE00B9D755 /* BottomBarView.swift in Sources */,
 				B580AA472BFC53C200B9D755 /* FavoriteModel.swift in Sources */,
@@ -451,7 +436,6 @@
 				B580AA322BFB5B2200B9D755 /* NotificationViewModel.swift in Sources */,
 				B580AA492BFC55A100B9D755 /* FavoriteViewModel.swift in Sources */,
 				B580AA172BFAF18F00B9D755 /* BalanceModel.swift in Sources */,
-				B580AA1D2BFAF3B400B9D755 /* APIBalance.swift in Sources */,
 				B580AA212BFB1A4400B9D755 /* BannerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
