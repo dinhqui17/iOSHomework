@@ -1,15 +1,15 @@
 //
-//  HomeViewController.swift
+//  HomeViewController1.swift
 //  TPISofware_Homework
 //
-//  Created by vfa on 17/05/2024.
+//  Created by vfa on 21/05/2024.
 //
 
 import UIKit
-import Combine
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomBarView: BottomBarView!
     @IBOutlet weak var buttonAreaView: ButtonAreaView!
     @IBOutlet weak var adsView: AdsView!
@@ -17,13 +17,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var navigationView: NavigationView!
     @IBOutlet weak var balanceView: BalanceView!
     
+    private let refreshControl = UIRefreshControl()
     
+    private let balanceViewModel = BalanceViewModel(usdBalanceRepository: USDHomeBalanceRepository(), khrBalanceRepository: KHRHomeBalanceRepository())
+    
+    private let favoriteViewModel = FavoriteViewModel(favoriterRepository: FavoriteRepository())
+    
+    private let notificationViewModel = NotificationViewModel(notificationRepository: NotificationRepository())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomBarView.layer.cornerRadius = bottomBarView.frame.size.height / 2
-        bottomBarView.clipsToBounds = true
-        
+        balanceView.viewModel = balanceViewModel
+        balanceView.bindingViewModel(viewModel: balanceViewModel)
+        favoriteView.viewModel = favoriteViewModel
+        favoriteView.bindingViewModel(viewModel: favoriteViewModel)
+        balanceViewModel.refreshBalance()
+        favoriteViewModel.loadFavorites()
+        notificationViewModel.loadNotification()
+        navigationView.bindingViewModel(viewModel: notificationViewModel)
+        setUpRefreshControl()
         setPush()
     }
     
@@ -31,18 +43,22 @@ class HomeViewController: UIViewController {
         hideNavigationBar()
     }
     
-    private func setPush() {
-        navigationView.buttonTapHandler = { [weak self] in
-            print("asdas")
-            let notificationVC = NotificationViewController()
-                    self?.navigationController?.pushViewController(notificationVC, animated: true)
-        }
+    private func setUpRefreshControl() {
+        scrollView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
     }
     
-
+    @objc private func handleRefresh() {
+        balanceViewModel.refreshBalance()
+        favoriteViewModel.loadFavorites()
+        notificationViewModel.loadNotification()
+        refreshControl.endRefreshing()
+    }
     
-
-    
+    private func setPush() {
+        navigationView.buttonTapHandler = { [weak self] in
+            let notificationVC = NotificationViewController(viewModel: self?.notificationViewModel)
+            self?.navigationController?.pushViewController(notificationVC, animated: true)
+        }
+    }
 }
-
-

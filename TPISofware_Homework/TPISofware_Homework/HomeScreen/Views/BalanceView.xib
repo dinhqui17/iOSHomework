@@ -13,7 +13,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="Vhl-9W-RRA"/>
                 <outlet property="khrValueLabel" destination="z1b-7n-Dnh" id="Zza-nN-BCs"/>
                 <outlet property="showHideBtn" destination="XK7-GN-63c" id="zqc-XN-Oe3"/>
-                <outlet property="usdValueLabel" destination="8gk-Q5-cVQ" id="fnk-o8-mKJ"/>
+                <outlet property="usdValueLabel" destination="8gk-Q5-cVQ" id="xW8-c0-C5s"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,7 +36,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="iconEye01On"/>
                     <connections>
-                        <action selector="showHideBtn:" destination="-1" eventType="touchUpInside" id="oA3-gh-gLJ"/>
+                        <action selector="touchUpInsideShowBalanceButton:" destination="-1" eventType="touchUpInside" id="tjf-Yd-dWu"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld5-0y-Ryg">

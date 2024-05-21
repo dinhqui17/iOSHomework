@@ -1,116 +1,115 @@
 //
-//  BalanceView.swift
+//  BalanceView1.swift
 //  TPISofware_Homework
 //
-//  Created by vfa on 17/05/2024.
+//  Created by vfa on 21/05/2024.
 //
 
 import UIKit
 import Combine
 
 class BalanceView: UIView {
-    
-    @IBOutlet weak var showHideBtn: UIButton!
-    @IBOutlet weak var khrValueLabel: UILabel!
+    @IBOutlet private weak var showHideBtn: UIButton!
+    @IBOutlet private weak var khrValueLabel: UILabel!
+
     @IBOutlet weak var usdValueLabel: UILabel!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private weak var contentView: UIView!
     
-    private let viewModel = HomeViewModel()
-    
-    var totalUSD: Double = 0.0
-    var totalKHR: Double = 0.0
-    var hiddenSymbols: String = "******"
+    weak var viewModel: BalanceViewModel! {
+        didSet {
+            if let viewModel = viewModel {
+                bindingViewModel(viewModel: viewModel)
+            } else {
+                disposeBag.removeAll()
+            }
+            
+        }
+    }
+
+    private var disposeBag = Set<AnyCancellable>()
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUpView()
-    }
+            super.init(frame: frame)
+            setUpView()
+        }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpView()
-    }
+        required init?(coder: NSCoder) {
+            super.init(coder: coder)
+            setUpView()
+        }
     
-    private func setUpView() {
-        Bundle.main.loadNibNamed("BalanceView", owner: self, options: nil)
-        self.addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        getUsdBalance1()
-        getKhrBalance1()
-        setUpShowHideBalance()
-    }
     
-    private func getUsdBalance1() {
-        // Get USD Savings 1
-        viewModel.getBalance(endpoint: .usdSavings1, type: .Saving)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalUSD += value
-                usdValueLabel.text = String(totalUSD)
-            })
-            .store(in: &viewModel.subscriptions)
+        private func setUpView() {
+            Bundle.main.loadNibNamed("BalanceView", owner: self, options: nil)
+            self.addSubview(contentView)
+            contentView.frame = self.bounds
+            contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            
+        }
+    
+   
+    
+     func bindingViewModel(viewModel: BalanceViewModel) {
+        // Chỉ chạy trên main queue
+        // Binding tất cả state
+//        viewModel.$usdBalanceValue.receive(on: DispatchQueue.main)
+//            .map({"\($0)"})
+//            .assign(to: \.text, on: self.usdValueLabel)
+//            .store(in: &disposeBag)
+//        
+//        viewModel.$khrBalanceValue.receive(on: DispatchQueue.main)
+//            .map({"\($0)"})
+//            .assign(to: \.text, on: self.khrValueLabel)
+//            .store(in: &disposeBag)
         
-        // Get USD Fixed 1
-        viewModel.getBalance(endpoint: .usdFixedDeposited1, type: .Fixed)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalUSD += value
-                usdValueLabel.text = String(totalUSD)
-            })
-            .store(in: &viewModel.subscriptions)
+//        viewModel.$isShowBalance
         
-        // Get USD Digital 1
-        viewModel.getBalance(endpoint: .usdDigital1, type: .Digital)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalUSD += value
-                usdValueLabel.text = String(totalUSD)
+        
+        Publishers.CombineLatest(viewModel.$isShowBalance, viewModel.$usdBalanceValue.map({"\($0)"}))
+            .receive(on: DispatchQueue.main)
+            .map({(isShowBalance, usdBalanceValue) -> String in
+                isShowBalance ? usdBalanceValue : "*******"
             })
-            .store(in: &viewModel.subscriptions)
+            .assign(to: \.text, on: self.usdValueLabel)
+            .store(in: &disposeBag)
+        
+        Publishers.CombineLatest(viewModel.$isShowBalance, viewModel.$khrBalanceValue.map({"\($0)"}))
+            .receive(on: DispatchQueue.main)
+            .map({(isShowBalance, khrBalanceValue) -> String in
+                isShowBalance ? khrBalanceValue : "*******"
+            })
+            .assign(to: \.text, on: self.khrValueLabel)
+            .store(in: &disposeBag)
+        
+        // $ Published
+        // Dùng debounce để tối ưu UI/UX
+        viewModel.$isLoading.debounce(for: 0.24, scheduler: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                self?.showLoading(isLoading: isLoading)
+            }
+            .store(in: &disposeBag)
+        
+        viewModel.$error.receive(on: DispatchQueue.main)
+            .sink { [weak self] error in
+                if let error = error {
+                    self?.showError(error: error)
+                }
+            }
+            .store(in: &disposeBag)
+        
     }
     
-    private func getKhrBalance1() {
-        // Get KHR Savings 1
-        viewModel.getBalance(endpoint: .khrSavings1, type: .Saving)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalKHR += value
-                khrValueLabel.text = String(totalKHR)
-            })
-            .store(in: &viewModel.subscriptions)
-        
-        // Get KHR Fixed 1
-        viewModel.getBalance(endpoint: .khrFixedDeposited1, type: .Fixed)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalKHR += value
-                khrValueLabel.text = String(totalKHR)
-            })
-            .store(in: &viewModel.subscriptions)
-        
-        // Get KHR Digital 1
-        viewModel.getBalance(endpoint: .khrDigital1, type: .Digital)
-            .catch{ _ in Just(0.0) }
-            .sink(receiveValue: { [self] value in
-                totalKHR += value
-                khrValueLabel.text = String(totalKHR)
-            })
-            .store(in: &viewModel.subscriptions)
+    
+    
+    @IBAction func touchUpInsideShowBalanceButton(_ sender: Any) {
+        viewModel.toggleShowBalance()
     }
     
-    private func setUpShowHideBalance() {
-        viewModel.$isShowBalance
-            .sink(receiveValue: { [self] isShow in
-                usdValueLabel.text = isShow ? String(totalUSD) : hiddenSymbols
-                khrValueLabel.text = isShow ? String(totalKHR) : hiddenSymbols
-                showHideBtn.setImage(isShow ? UIImage(named: "iconEye01On") : UIImage(named: "iconEye02Off"), for: .normal)
-                
-            })
-            .store(in: &viewModel.subscriptions)
+    private func showLoading(isLoading: Bool) {
+        print(Self.self,#function,isLoading)
     }
     
-    @IBAction func showHideBtn(_ sender: Any) {
-        viewModel.isShowBalance = !viewModel.isShowBalance
+    private func showError(error: Error) {
+        print(Self.self,#function,error.localizedDescription)
     }
 }

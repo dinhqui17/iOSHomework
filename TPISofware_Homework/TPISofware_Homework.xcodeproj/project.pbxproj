@@ -12,9 +12,8 @@
 		B580A9BC2BF7308E00B9D755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B580A9BA2BF7308E00B9D755 /* LaunchScreen.storyboard */; };
 		B580A9C42BF7376900B9D755 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9C32BF7376900B9D755 /* NavigationView.swift */; };
 		B580A9C62BF7383800B9D755 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9C52BF7383800B9D755 /* NavigationView.xib */; };
-		B580A9CB2BF7398300B9D755 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9C92BF7398300B9D755 /* HomeViewController.swift */; };
 		B580A9CC2BF7398300B9D755 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9CA2BF7398300B9D755 /* HomeViewController.xib */; };
-		B580A9CE2BF7BE4C00B9D755 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9CD2BF7BE4C00B9D755 /* BalanceView.swift */; };
+		B580A9CE2BF7BE4C00B9D755 /* BalanceView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */; };
 		B580A9D02BF7BE5A00B9D755 /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */; };
 		B580A9D72BF7C79200B9D755 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9D52BF7C79200B9D755 /* ButtonCell.swift */; };
 		B580A9D82BF7C79200B9D755 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9D62BF7C79200B9D755 /* ButtonCell.xib */; };
@@ -24,7 +23,7 @@
 		B580A9E22BF7D86400B9D755 /* FavoriteButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9E02BF7D86400B9D755 /* FavoriteButtonCell.xib */; };
 		B580A9E62BF7DFD900B9D755 /* AdsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9E52BF7DFD900B9D755 /* AdsView.xib */; };
 		B580A9EA2BF7E16000B9D755 /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9E92BF7E16000B9D755 /* AdsView.swift */; };
-		B580A9EC2BF9D2E200B9D755 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9EB2BF9D2E200B9D755 /* HomeViewModel.swift */; };
+		B580A9EC2BF9D2E200B9D755 /* HomeViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */; };
 		B580A9EF2BF9D8E500B9D755 /* AdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9ED2BF9D8E500B9D755 /* AdsCell.swift */; };
 		B580A9F02BF9D8E500B9D755 /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9EE2BF9D8E500B9D755 /* AdsCell.xib */; };
 		B580A9F62BF9EDC300B9D755 /* ButtonAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9F52BF9EDC300B9D755 /* ButtonAreaView.swift */; };
@@ -48,6 +47,19 @@
 		B580AA322BFB5B2200B9D755 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA312BFB5B2200B9D755 /* NotificationViewModel.swift */; };
 		B580AA352BFB5EC300B9D755 /* NotificationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA332BFB5EC300B9D755 /* NotificationMessageCell.swift */; };
 		B580AA362BFB5EC300B9D755 /* NotificationMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580AA342BFB5EC300B9D755 /* NotificationMessageCell.xib */; };
+		B580AA392BFBABD000B9D755 /* HomeBalanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA382BFBABD000B9D755 /* HomeBalanceRepository.swift */; };
+		B580AA3B2BFBB40B00B9D755 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA3A2BFBB40B00B9D755 /* BalanceViewModel.swift */; };
+		B580AA3D2BFBBA4E00B9D755 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA3C2BFBBA4E00B9D755 /* BalanceView.swift */; };
+		B580AA3F2BFBC5B000B9D755 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA3E2BFBC5B000B9D755 /* HomeViewController.swift */; };
+		B580AA412BFC496500B9D755 /* MiddleButtonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA402BFC496500B9D755 /* MiddleButtonRepository.swift */; };
+		B580AA432BFC49D100B9D755 /* MiddleButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA422BFC49D100B9D755 /* MiddleButtonViewModel.swift */; };
+		B580AA452BFC51C000B9D755 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA442BFC51C000B9D755 /* FavoriteRepository.swift */; };
+		B580AA472BFC53C200B9D755 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA462BFC53C200B9D755 /* FavoriteModel.swift */; };
+		B580AA492BFC55A100B9D755 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA482BFC55A100B9D755 /* FavoriteViewModel.swift */; };
+		B580AA4B2BFC591500B9D755 /* MiddleButtonItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA4A2BFC591500B9D755 /* MiddleButtonItemModel.swift */; };
+		B580AA4D2BFC5F8C00B9D755 /* BannerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA4C2BFC5F8C00B9D755 /* BannerRepository.swift */; };
+		B580AA4F2BFC603A00B9D755 /* BannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */; };
+		B580AA512BFC6A1900B9D755 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA502BFC6A1900B9D755 /* NotificationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +70,8 @@
 		B580A9BD2BF7308E00B9D755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B580A9C32BF7376900B9D755 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		B580A9C52BF7383800B9D755 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
-		B580A9C92BF7398300B9D755 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B580A9CA2BF7398300B9D755 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B580A9CD2BF7BE4C00B9D755 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView2.swift; sourceTree = "<group>"; };
 		B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceView.xib; sourceTree = "<group>"; };
 		B580A9D52BF7C79200B9D755 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		B580A9D62BF7C79200B9D755 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
@@ -70,7 +81,7 @@
 		B580A9E02BF7D86400B9D755 /* FavoriteButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteButtonCell.xib; sourceTree = "<group>"; };
 		B580A9E52BF7DFD900B9D755 /* AdsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsView.xib; sourceTree = "<group>"; };
 		B580A9E92BF7E16000B9D755 /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
-		B580A9EB2BF9D2E200B9D755 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel2.swift; sourceTree = "<group>"; };
 		B580A9ED2BF9D8E500B9D755 /* AdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCell.swift; sourceTree = "<group>"; };
 		B580A9EE2BF9D8E500B9D755 /* AdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCell.xib; sourceTree = "<group>"; };
 		B580A9F52BF9EDC300B9D755 /* ButtonAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAreaView.swift; sourceTree = "<group>"; };
@@ -94,6 +105,19 @@
 		B580AA312BFB5B2200B9D755 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		B580AA332BFB5EC300B9D755 /* NotificationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMessageCell.swift; sourceTree = "<group>"; };
 		B580AA342BFB5EC300B9D755 /* NotificationMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationMessageCell.xib; sourceTree = "<group>"; };
+		B580AA382BFBABD000B9D755 /* HomeBalanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBalanceRepository.swift; sourceTree = "<group>"; };
+		B580AA3A2BFBB40B00B9D755 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		B580AA3C2BFBBA4E00B9D755 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		B580AA3E2BFBC5B000B9D755 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B580AA402BFC496500B9D755 /* MiddleButtonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleButtonRepository.swift; sourceTree = "<group>"; };
+		B580AA422BFC49D100B9D755 /* MiddleButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleButtonViewModel.swift; sourceTree = "<group>"; };
+		B580AA442BFC51C000B9D755 /* FavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
+		B580AA462BFC53C200B9D755 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		B580AA482BFC55A100B9D755 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		B580AA4A2BFC591500B9D755 /* MiddleButtonItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleButtonItemModel.swift; sourceTree = "<group>"; };
+		B580AA4C2BFC5F8C00B9D755 /* BannerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerRepository.swift; sourceTree = "<group>"; };
+		B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewModel.swift; sourceTree = "<group>"; };
+		B580AA502BFC6A1900B9D755 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +176,8 @@
 		B580A9FC2BF9F1C000B9D755 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B580A9C92BF7398300B9D755 /* HomeViewController.swift */,
 				B580A9CA2BF7398300B9D755 /* HomeViewController.xib */,
+				B580AA3E2BFBC5B000B9D755 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,7 +188,7 @@
 				B580A9FF2BF9F1DE00B9D755 /* Cells */,
 				B580A9C32BF7376900B9D755 /* NavigationView.swift */,
 				B580A9C52BF7383800B9D755 /* NavigationView.xib */,
-				B580A9CD2BF7BE4C00B9D755 /* BalanceView.swift */,
+				B580A9CD2BF7BE4C00B9D755 /* BalanceView2.swift */,
 				B580A9CF2BF7BE5A00B9D755 /* BalanceView.xib */,
 				B580A9DB2BF7D33E00B9D755 /* FavoriteView.swift */,
 				B580A9DD2BF7D4C800B9D755 /* FavoriteView.xib */,
@@ -174,6 +198,7 @@
 				B580A9F72BF9EDD200B9D755 /* ButtonAreaView.xib */,
 				B580AA082BF9F8AE00B9D755 /* BottomBarView.swift */,
 				B580AA0A2BF9F8B600B9D755 /* BottomBarView.xib */,
+				B580AA3C2BFBBA4E00B9D755 /* BalanceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +206,11 @@
 		B580A9FE2BF9F1C900B9D755 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B580A9EB2BF9D2E200B9D755 /* HomeViewModel.swift */,
+				B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */,
+				B580AA3A2BFBB40B00B9D755 /* BalanceViewModel.swift */,
+				B580AA422BFC49D100B9D755 /* MiddleButtonViewModel.swift */,
+				B580AA482BFC55A100B9D755 /* FavoriteViewModel.swift */,
+				B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +241,7 @@
 		B580AA132BFAEF3900B9D755 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B580AA372BFBABC000B9D755 /* Repositories */,
 				B580AA152BFAF11100B9D755 /* Models */,
 				B580AA142BFAEF3D00B9D755 /* Network */,
 			);
@@ -236,6 +266,8 @@
 				B580AA162BFAF18E00B9D755 /* BalanceModel.swift */,
 				B580AA202BFB1A4400B9D755 /* BannerModel.swift */,
 				B580AA2D2BFB595000B9D755 /* NotificationModel.swift */,
+				B580AA462BFC53C200B9D755 /* FavoriteModel.swift */,
+				B580AA4A2BFC591500B9D755 /* MiddleButtonItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +314,18 @@
 				B580AA342BFB5EC300B9D755 /* NotificationMessageCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B580AA372BFBABC000B9D755 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B580AA382BFBABD000B9D755 /* HomeBalanceRepository.swift */,
+				B580AA402BFC496500B9D755 /* MiddleButtonRepository.swift */,
+				B580AA442BFC51C000B9D755 /* FavoriteRepository.swift */,
+				B580AA4C2BFC5F8C00B9D755 /* BannerRepository.swift */,
+				B580AA502BFC6A1900B9D755 /* NotificationRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,23 +417,35 @@
 				B580A9C42BF7376900B9D755 /* NavigationView.swift in Sources */,
 				B580A9F62BF9EDC300B9D755 /* ButtonAreaView.swift in Sources */,
 				B580AA1B2BFAF36700B9D755 /* APIError.swift in Sources */,
+				B580AA412BFC496500B9D755 /* MiddleButtonRepository.swift in Sources */,
 				B580AA092BF9F8AE00B9D755 /* BottomBarView.swift in Sources */,
-				B580A9EC2BF9D2E200B9D755 /* HomeViewModel.swift in Sources */,
-				B580A9CE2BF7BE4C00B9D755 /* BalanceView.swift in Sources */,
+				B580A9EC2BF9D2E200B9D755 /* HomeViewModel2.swift in Sources */,
+				B580AA472BFC53C200B9D755 /* FavoriteModel.swift in Sources */,
+				B580A9CE2BF7BE4C00B9D755 /* BalanceView2.swift in Sources */,
+				B580AA3D2BFBBA4E00B9D755 /* BalanceView.swift in Sources */,
+				B580AA3B2BFBB40B00B9D755 /* BalanceViewModel.swift in Sources */,
+				B580AA392BFBABD000B9D755 /* HomeBalanceRepository.swift in Sources */,
+				B580AA4B2BFC591500B9D755 /* MiddleButtonItemModel.swift in Sources */,
 				B580AA192BFAF34D00B9D755 /* APIService.swift in Sources */,
 				B580AA352BFB5EC300B9D755 /* NotificationMessageCell.swift in Sources */,
 				B580A9B02BF7308B00B9D755 /* AppDelegate.swift in Sources */,
 				B580A9EA2BF7E16000B9D755 /* AdsView.swift in Sources */,
 				B580AA0E2BF9F9A800B9D755 /* BottomBarCell.swift in Sources */,
+				B580AA512BFC6A1900B9D755 /* NotificationRepository.swift in Sources */,
+				B580AA4F2BFC603A00B9D755 /* BannerViewModel.swift in Sources */,
 				B580AA282BFB514300B9D755 /* NotificationViewController.swift in Sources */,
+				B580AA452BFC51C000B9D755 /* FavoriteRepository.swift in Sources */,
 				B580A9D72BF7C79200B9D755 /* ButtonCell.swift in Sources */,
+				B580AA432BFC49D100B9D755 /* MiddleButtonViewModel.swift in Sources */,
+				B580AA3F2BFBC5B000B9D755 /* HomeViewController.swift in Sources */,
 				B580AA232BFB211800B9D755 /* Extensions.swift in Sources */,
 				B580AA2E2BFB595000B9D755 /* NotificationModel.swift in Sources */,
+				B580AA4D2BFC5F8C00B9D755 /* BannerRepository.swift in Sources */,
 				B580A9DC2BF7D33E00B9D755 /* FavoriteView.swift in Sources */,
 				B580AA122BF9FDF300B9D755 /* HomeModel.swift in Sources */,
 				B580A9E12BF7D86400B9D755 /* FavoriteButtonCell.swift in Sources */,
-				B580A9CB2BF7398300B9D755 /* HomeViewController.swift in Sources */,
 				B580AA322BFB5B2200B9D755 /* NotificationViewModel.swift in Sources */,
+				B580AA492BFC55A100B9D755 /* FavoriteViewModel.swift in Sources */,
 				B580AA172BFAF18F00B9D755 /* BalanceModel.swift in Sources */,
 				B580AA1D2BFAF3B400B9D755 /* APIBalance.swift in Sources */,
 				B580AA212BFB1A4400B9D755 /* BannerModel.swift in Sources */,

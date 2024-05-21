@@ -17,22 +17,4 @@ struct BottomBarItemModel {
     }
 }
 
-struct MiddleButtonItemModel {
-    var label: String
-    var image: String
-    
-    init(label: String, image: String) {
-        self.label = label
-        self.image = image
-    }
-}
 
-struct FavoriteItemModel {
-    var label: String
-    var image: String
-    
-    init(label: String, image: String) {
-        self.label = label
-        self.image = image
-    }
-}

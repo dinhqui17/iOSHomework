@@ -16,9 +16,9 @@ class FavoriteButtonCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure(with item: FavoriteItemModel) {
-        label.text = item.label
-        btn.setImage(UIImage(named: item.image), for: .normal)
+    func configure(with item: FavoriteListModel) {
+        label.text = item.nickname
+        btn.setImage(UIImage(named: item.imageName), for: .normal)
     }
 
 }

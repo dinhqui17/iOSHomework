@@ -9,14 +9,22 @@ import UIKit
 
 class NotificationViewController: UIViewController {
     
-    private let viewModel = NotificationViewModel()
-    private var notifications: [NotificationMessagesModel] = []
     @IBOutlet weak var notificationTbv: UITableView!
+    
+    let viewModel: NotificationViewModel!
+    
+    init(viewModel: NotificationViewModel!) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showNavigationBar()
-        setUpData()
         setUpTableView()
         self.title = "Notification"
     }
@@ -27,34 +35,17 @@ class NotificationViewController: UIViewController {
         notificationTbv.register(UINib(nibName: "NotificationMessageCell", bundle: nil), forCellReuseIdentifier: "NotificationMessageCell")
     }
     
-    private func setUpData() {
-        viewModel.getNotifications(endpoint: .notEmpty)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    fatalError(error.localizedDescription)
-                }
-            },
-                  receiveValue: { [self] result in
-                notifications = result
-                notificationTbv.reloadData()
-            })
-            .store(in: &viewModel.subscriptions)
-    }
-    
 }
 
 extension NotificationViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notifications.count
+        return viewModel.notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationMessageCell", for: indexPath) as! NotificationMessageCell
-        cell.configure(with: notifications[indexPath.row])
+        cell.configure(with: viewModel.notifications[indexPath.row])
         return cell
     }
     

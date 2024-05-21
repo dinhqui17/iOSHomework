@@ -9,7 +9,6 @@ import UIKit
 
 class AdsCell: UICollectionViewCell {
     
-    let viewModel = HomeViewModel()
     
     
     @IBOutlet weak var imageView: UIImageView!

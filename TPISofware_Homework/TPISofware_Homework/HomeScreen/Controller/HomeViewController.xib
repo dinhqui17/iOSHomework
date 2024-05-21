@@ -16,6 +16,7 @@
                 <outlet property="buttonAreaView" destination="J6h-tq-tTR" id="knb-HD-MfG"/>
                 <outlet property="favoriteView" destination="KbQ-SG-Yeh" id="F5X-hU-hM3"/>
                 <outlet property="navigationView" destination="z9w-Xl-7Kk" id="keY-1U-Y2n"/>
+                <outlet property="scrollView" destination="2s8-6u-lm0" id="3ka-Qh-XHe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
