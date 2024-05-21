@@ -46,7 +46,7 @@
                         <constraint firstItem="LGc-AZ-aqk" firstAttribute="centerY" secondItem="QIN-K2-1Ni" secondAttribute="centerY" id="Rbg-b3-zgK"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KZp-ie-KCT">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KZp-ie-KCT">
                     <rect key="frame" x="0.0" y="52" width="375" height="84"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gnv-SI-CmE">

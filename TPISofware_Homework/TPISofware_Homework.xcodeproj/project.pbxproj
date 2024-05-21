@@ -23,7 +23,6 @@
 		B580A9E22BF7D86400B9D755 /* FavoriteButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9E02BF7D86400B9D755 /* FavoriteButtonCell.xib */; };
 		B580A9E62BF7DFD900B9D755 /* AdsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9E52BF7DFD900B9D755 /* AdsView.xib */; };
 		B580A9EA2BF7E16000B9D755 /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9E92BF7E16000B9D755 /* AdsView.swift */; };
-		B580A9EC2BF9D2E200B9D755 /* HomeViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */; };
 		B580A9EF2BF9D8E500B9D755 /* AdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9ED2BF9D8E500B9D755 /* AdsCell.swift */; };
 		B580A9F02BF9D8E500B9D755 /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B580A9EE2BF9D8E500B9D755 /* AdsCell.xib */; };
 		B580A9F62BF9EDC300B9D755 /* ButtonAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580A9F52BF9EDC300B9D755 /* ButtonAreaView.swift */; };
@@ -60,6 +59,8 @@
 		B580AA4D2BFC5F8C00B9D755 /* BannerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA4C2BFC5F8C00B9D755 /* BannerRepository.swift */; };
 		B580AA4F2BFC603A00B9D755 /* BannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */; };
 		B580AA512BFC6A1900B9D755 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA502BFC6A1900B9D755 /* NotificationRepository.swift */; };
+		B580AA532BFC76F900B9D755 /* BottomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA522BFC76F900B9D755 /* BottomBarViewModel.swift */; };
+		B580AA552BFC796700B9D755 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580AA542BFC796700B9D755 /* ShimmerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +82,6 @@
 		B580A9E02BF7D86400B9D755 /* FavoriteButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteButtonCell.xib; sourceTree = "<group>"; };
 		B580A9E52BF7DFD900B9D755 /* AdsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsView.xib; sourceTree = "<group>"; };
 		B580A9E92BF7E16000B9D755 /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
-		B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel2.swift; sourceTree = "<group>"; };
 		B580A9ED2BF9D8E500B9D755 /* AdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCell.swift; sourceTree = "<group>"; };
 		B580A9EE2BF9D8E500B9D755 /* AdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCell.xib; sourceTree = "<group>"; };
 		B580A9F52BF9EDC300B9D755 /* ButtonAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAreaView.swift; sourceTree = "<group>"; };
@@ -118,6 +118,8 @@
 		B580AA4C2BFC5F8C00B9D755 /* BannerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerRepository.swift; sourceTree = "<group>"; };
 		B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewModel.swift; sourceTree = "<group>"; };
 		B580AA502BFC6A1900B9D755 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
+		B580AA522BFC76F900B9D755 /* BottomBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarViewModel.swift; sourceTree = "<group>"; };
+		B580AA542BFC796700B9D755 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				B580AA082BF9F8AE00B9D755 /* BottomBarView.swift */,
 				B580AA0A2BF9F8B600B9D755 /* BottomBarView.xib */,
 				B580AA3C2BFBBA4E00B9D755 /* BalanceView.swift */,
+				B580AA542BFC796700B9D755 /* ShimmerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,11 +209,11 @@
 		B580A9FE2BF9F1C900B9D755 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B580A9EB2BF9D2E200B9D755 /* HomeViewModel2.swift */,
 				B580AA3A2BFBB40B00B9D755 /* BalanceViewModel.swift */,
 				B580AA422BFC49D100B9D755 /* MiddleButtonViewModel.swift */,
 				B580AA482BFC55A100B9D755 /* FavoriteViewModel.swift */,
 				B580AA4E2BFC603A00B9D755 /* BannerViewModel.swift */,
+				B580AA522BFC76F900B9D755 /* BottomBarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -419,7 +422,6 @@
 				B580AA1B2BFAF36700B9D755 /* APIError.swift in Sources */,
 				B580AA412BFC496500B9D755 /* MiddleButtonRepository.swift in Sources */,
 				B580AA092BF9F8AE00B9D755 /* BottomBarView.swift in Sources */,
-				B580A9EC2BF9D2E200B9D755 /* HomeViewModel2.swift in Sources */,
 				B580AA472BFC53C200B9D755 /* FavoriteModel.swift in Sources */,
 				B580A9CE2BF7BE4C00B9D755 /* BalanceView2.swift in Sources */,
 				B580AA3D2BFBBA4E00B9D755 /* BalanceView.swift in Sources */,
@@ -427,6 +429,7 @@
 				B580AA392BFBABD000B9D755 /* HomeBalanceRepository.swift in Sources */,
 				B580AA4B2BFC591500B9D755 /* MiddleButtonItemModel.swift in Sources */,
 				B580AA192BFAF34D00B9D755 /* APIService.swift in Sources */,
+				B580AA552BFC796700B9D755 /* ShimmerView.swift in Sources */,
 				B580AA352BFB5EC300B9D755 /* NotificationMessageCell.swift in Sources */,
 				B580A9B02BF7308B00B9D755 /* AppDelegate.swift in Sources */,
 				B580A9EA2BF7E16000B9D755 /* AdsView.swift in Sources */,
@@ -441,6 +444,7 @@
 				B580AA232BFB211800B9D755 /* Extensions.swift in Sources */,
 				B580AA2E2BFB595000B9D755 /* NotificationModel.swift in Sources */,
 				B580AA4D2BFC5F8C00B9D755 /* BannerRepository.swift in Sources */,
+				B580AA532BFC76F900B9D755 /* BottomBarViewModel.swift in Sources */,
 				B580A9DC2BF7D33E00B9D755 /* FavoriteView.swift in Sources */,
 				B580AA122BF9FDF300B9D755 /* HomeModel.swift in Sources */,
 				B580A9E12BF7D86400B9D755 /* FavoriteButtonCell.swift in Sources */,

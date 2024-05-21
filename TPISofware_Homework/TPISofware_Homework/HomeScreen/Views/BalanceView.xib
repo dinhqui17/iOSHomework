@@ -11,8 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BalanceView" customModule="TPISofware_Homework" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Vhl-9W-RRA"/>
+                <outlet property="khrShimmerView" destination="LgD-3K-nLf" id="4sT-RW-CY9"/>
                 <outlet property="khrValueLabel" destination="z1b-7n-Dnh" id="Zza-nN-BCs"/>
                 <outlet property="showHideBtn" destination="XK7-GN-63c" id="zqc-XN-Oe3"/>
+                <outlet property="usdShimmerView" destination="YUP-JH-UzB" id="thu-f1-njp"/>
                 <outlet property="usdValueLabel" destination="8gk-Q5-cVQ" id="xW8-c0-C5s"/>
             </connections>
         </placeholder>
@@ -46,7 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-Q5-cVQ">
-                    <rect key="frame" x="23.999999999999993" y="68.333333333333329" width="91.333333333333314" height="27.666666666666671"/>
+                    <rect key="frame" x="24" y="68.333333333333329" width="327" height="27.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -58,27 +60,45 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-7n-Dnh">
-                    <rect key="frame" x="23.999999999999993" y="123.33333333333333" width="91.333333333333314" height="27.666666666666671"/>
+                    <rect key="frame" x="24" y="123.33333333333333" width="327" height="27.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUP-JH-UzB" userLabel="Shimmer" customClass="ShimmerView" customModule="TPISofware_Homework" customModuleProvider="target">
+                    <rect key="frame" x="-139" y="68.333333333333329" width="359" height="28"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgD-3K-nLf" customClass="ShimmerView" customModule="TPISofware_Homework" customModuleProvider="target">
+                    <rect key="frame" x="24" y="123.33333333333331" width="327" height="28"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="YUP-JH-UzB" firstAttribute="centerX" secondItem="ld5-0y-Ryg" secondAttribute="centerX" id="02M-vf-9ee"/>
                 <constraint firstItem="ld5-0y-Ryg" firstAttribute="top" secondItem="4Rp-hG-dkq" secondAttribute="bottom" constant="16" id="0TK-c3-0fH"/>
+                <constraint firstItem="LgD-3K-nLf" firstAttribute="height" secondItem="z1b-7n-Dnh" secondAttribute="height" multiplier="1.01205" id="1IS-qi-PEJ"/>
                 <constraint firstItem="8gk-Q5-cVQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="55h-ZB-ewv"/>
+                <constraint firstItem="YUP-JH-UzB" firstAttribute="centerY" secondItem="8gk-Q5-cVQ" secondAttribute="centerY" id="7CP-Nb-BXy"/>
+                <constraint firstItem="YUP-JH-UzB" firstAttribute="width" secondItem="8gk-Q5-cVQ" secondAttribute="width" multiplier="1.09786" id="8uO-PJ-pgw"/>
+                <constraint firstItem="YUP-JH-UzB" firstAttribute="height" secondItem="8gk-Q5-cVQ" secondAttribute="height" multiplier="1.01205" id="Ddv-YI-XeE"/>
                 <constraint firstItem="z1b-7n-Dnh" firstAttribute="top" secondItem="05f-DD-3Cz" secondAttribute="bottom" id="IVz-Ka-hWf"/>
                 <constraint firstItem="8gk-Q5-cVQ" firstAttribute="top" secondItem="ld5-0y-Ryg" secondAttribute="bottom" id="NB5-lR-iqh"/>
                 <constraint firstItem="05f-DD-3Cz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="NfQ-fP-uzQ"/>
+                <constraint firstItem="LgD-3K-nLf" firstAttribute="centerY" secondItem="z1b-7n-Dnh" secondAttribute="centerY" id="U28-So-haN"/>
                 <constraint firstItem="4Rp-hG-dkq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="WV6-9a-8cl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z1b-7n-Dnh" secondAttribute="trailing" constant="24" id="YTm-MH-dY3"/>
                 <constraint firstItem="XK7-GN-63c" firstAttribute="leading" secondItem="4Rp-hG-dkq" secondAttribute="trailing" constant="8" id="YxH-o6-mBz"/>
+                <constraint firstItem="LgD-3K-nLf" firstAttribute="width" secondItem="05f-DD-3Cz" secondAttribute="width" multiplier="10.2188" id="enA-md-v4o"/>
+                <constraint firstItem="LgD-3K-nLf" firstAttribute="centerX" secondItem="z1b-7n-Dnh" secondAttribute="centerX" id="gEy-XF-TV3"/>
                 <constraint firstItem="z1b-7n-Dnh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="hae-0q-lQF"/>
                 <constraint firstItem="4Rp-hG-dkq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="iFe-9o-EGI"/>
                 <constraint firstItem="05f-DD-3Cz" firstAttribute="top" secondItem="8gk-Q5-cVQ" secondAttribute="bottom" constant="8" id="mgj-AA-S1o"/>
                 <constraint firstItem="XK7-GN-63c" firstAttribute="centerY" secondItem="4Rp-hG-dkq" secondAttribute="centerY" id="mvl-nY-UAD"/>
                 <constraint firstItem="ld5-0y-Ryg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="pmR-7d-0LB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8gk-Q5-cVQ" secondAttribute="trailing" constant="24" id="xHl-6z-g4i"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="84.732824427480907" y="-11.267605633802818"/>

@@ -76,11 +76,11 @@ class AdsView: UIView {
     
     func scrollToNextItem() {
         let currentOffset = collectionView.contentOffset
-        let nextOffset = CGPoint(x: currentOffset.x + collectionView.bounds.width, y: currentOffset.y)
+        let nextOffset = CGPoint(x: currentOffset.x + collectionView.frame.width, y: currentOffset.y)
         if nextOffset.x < collectionView.contentSize.width {
             collectionView.setContentOffset(nextOffset, animated: true)
         } else {
-            collectionView.setContentOffset(CGPoint.zero, animated: true)
+            collectionView.setContentOffset(nextOffset, animated: true)
         }
     }
 }

@@ -37,6 +37,17 @@ class HomeViewController: UIViewController {
         navigationView.bindingViewModel(viewModel: notificationViewModel)
         setUpRefreshControl()
         setPush()
+        
+        
+//        bottomBarView.clipsToBounds = true
+        
+        bottomBarView.layer.shadowColor = UIColor.black.cgColor
+        bottomBarView.layer.shadowOpacity = 0.5
+        bottomBarView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        bottomBarView.layer.shadowRadius = 4
+        bottomBarView.layer.masksToBounds = true
+        
+        bottomBarView.layer.cornerRadius = bottomBarView.frame.size.height / 2
     }
     
     override func viewWillAppear(_ animated: Bool) {

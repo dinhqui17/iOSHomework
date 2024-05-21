@@ -9,6 +9,8 @@ import UIKit
 import Combine
 
 class BalanceView: UIView {
+    @IBOutlet weak var khrShimmerView: ShimmerView!
+    @IBOutlet weak var usdShimmerView: ShimmerView!
     @IBOutlet private weak var showHideBtn: UIButton!
     @IBOutlet private weak var khrValueLabel: UILabel!
 
@@ -44,26 +46,9 @@ class BalanceView: UIView {
             self.addSubview(contentView)
             contentView.frame = self.bounds
             contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-            
         }
     
-   
-    
      func bindingViewModel(viewModel: BalanceViewModel) {
-        // Chỉ chạy trên main queue
-        // Binding tất cả state
-//        viewModel.$usdBalanceValue.receive(on: DispatchQueue.main)
-//            .map({"\($0)"})
-//            .assign(to: \.text, on: self.usdValueLabel)
-//            .store(in: &disposeBag)
-//        
-//        viewModel.$khrBalanceValue.receive(on: DispatchQueue.main)
-//            .map({"\($0)"})
-//            .assign(to: \.text, on: self.khrValueLabel)
-//            .store(in: &disposeBag)
-        
-//        viewModel.$isShowBalance
-        
         
         Publishers.CombineLatest(viewModel.$isShowBalance, viewModel.$usdBalanceValue.map({"\($0)"}))
             .receive(on: DispatchQueue.main)
@@ -81,9 +66,8 @@ class BalanceView: UIView {
             .assign(to: \.text, on: self.khrValueLabel)
             .store(in: &disposeBag)
         
-        // $ Published
-        // Dùng debounce để tối ưu UI/UX
-        viewModel.$isLoading.debounce(for: 0.24, scheduler: DispatchQueue.main)
+         // Use debound for optimize UI/UX
+        viewModel.$isLoading.debounce(for: 3, scheduler: DispatchQueue.main)
             .sink { [weak self] isLoading in
                 self?.showLoading(isLoading: isLoading)
             }
@@ -96,16 +80,16 @@ class BalanceView: UIView {
                 }
             }
             .store(in: &disposeBag)
-        
     }
     
-    
-    
+
     @IBAction func touchUpInsideShowBalanceButton(_ sender: Any) {
         viewModel.toggleShowBalance()
     }
     
     private func showLoading(isLoading: Bool) {
+        khrShimmerView.isHidden = !isLoading
+        usdShimmerView.isHidden = !isLoading
         print(Self.self,#function,isLoading)
     }
     

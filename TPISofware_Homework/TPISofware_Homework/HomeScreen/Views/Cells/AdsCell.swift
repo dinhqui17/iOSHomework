@@ -21,6 +21,7 @@ class AdsCell: UICollectionViewCell {
         if let url = URL(string: imageString) {
             UIImage.loadImage(from: url) { image in
                 self.imageView.image = image
+                self.imageView.contentMode = .scaleAspectFit
             }
             contentView.backgroundColor = .yellow
         }
